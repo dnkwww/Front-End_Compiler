@@ -22,7 +22,9 @@ bison (GNU Bison) 2.4.1
 
 ### 作業過程說明
 
-report的Test run results指令未分類檔案，在CMD打開根目錄打以下指令執行即可：
+report的Test run results指令未分類檔案，在CMD打開根目錄打以下指令執行即可。
+
+*註：須先自行在根目錄新增一個空資料夾，資料夾名generated。
 
 1.
 完成minij_lex.l、minij_parse.y
