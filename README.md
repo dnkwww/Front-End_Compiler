@@ -13,7 +13,9 @@ Use lex (or flex) and yacc (or bison) to implement a front end (including a lexi
 ### 開發環境版本
 
 gcc (tdm64-1) 4.9.2
+
 flex version 2.5.4
+
 bison (GNU Bison) 2.4.1
 
 ---
