@@ -24,7 +24,7 @@ bison (GNU Bison) 2.4.1
 
 report的Test run results指令未分類檔案，在CMD打開根目錄打以下指令執行即可。
 
-**註：須先自行在根目錄新增兩個空資料夾，資料夾名稱一個是generated、一個是obj。**
+>>**註：須先自行在根目錄新增兩個空資料夾，資料夾名稱一個是generated、一個是obj。**
 
 1.
 完成minij_lex.l、minij_parse.y
