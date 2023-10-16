@@ -42,16 +42,16 @@ bison -d –o ./generated/minij_parse.c ./src/minij_parse.y
 
 4. 使用gcc把minij_lex.c編譯成minij_lex.o
 
->使用gcc把minij_parse.c編譯成minij_parse.o
+    使用gcc把minij_parse.c編譯成minij_parse.o
 
->使用gcc把minij.c編譯成minij.o
+    使用gcc把minij.c編譯成minij.o
 ```
 gcc -c -I./include ./generated/minij_lex.c -o ./obj/minij_lex.o
 gcc -c -I./include ./generated/minij_parse.c -o ./obj/minij_parse.o
 gcc -c -I./include -I./generated ./src/minij.c -o ./obj/minij.o
 ```
 
->5. 使用gcc link minij.o、minij_lex.o、minij_parse.o到minijparse.exe
+5. 使用gcc link minij.o、minij_lex.o、minij_parse.o到minijparse.exe
 ```
 gcc -o ./bin/mjparse.exe ./obj/minij.o ./obj/minij_lex.o ./obj/minij_parse.o
 ```
