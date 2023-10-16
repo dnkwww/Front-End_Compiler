@@ -26,21 +26,21 @@ report的Test run results指令未分類檔案，在CMD打開根目錄打以下�
 
 `**註：須先自行在根目錄新增兩個空資料夾，資料夾名稱一個是generated、一個是obj。**`
 
->1. 完成minij_lex.l、minij_parse.y
+1. 完成minij_lex.l、minij_parse.y
 
->2. 使用flex把minij_lex.l編譯成minij_lex.c
+2. 使用flex把minij_lex.l編譯成minij_lex.c
 ```
 flex -o./generated/minij_lex.c ./src/minij_lex.l
 ```
 
->3. 使用bison把minij_parse.y編譯成minij_parse.c
+3. 使用bison把minij_parse.y編譯成minij_parse.c
 
->使用bison產生minij_parse.h
+    使用bison產生minij_parse.h
 ```
 bison -d –o ./generated/minij_parse.c ./src/minij_parse.y
 ```
 
->4. 使用gcc把minij_lex.c編譯成minij_lex.o
+4. 使用gcc把minij_lex.c編譯成minij_lex.o
 
 >使用gcc把minij_parse.c編譯成minij_parse.o
 
