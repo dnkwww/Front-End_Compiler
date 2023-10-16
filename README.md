@@ -26,37 +26,32 @@ report的Test run results指令未分類檔案，在CMD打開根目錄打以下�
 
 `**註：須先自行在根目錄新增兩個空資料夾，資料夾名稱一個是generated、一個是obj。**`
 
-1.
-完成minij_lex.l、minij_parse.y
+>1. 完成minij_lex.l、minij_parse.y
 
-2.
-使用flex把minij_lex.l編譯成minij_lex.c
+>2. 使用flex把minij_lex.l編譯成minij_lex.c
 ```
 flex -o./generated/minij_lex.c ./src/minij_lex.l
 ```
 
-3.
-使用bison把minij_parse.y編譯成minij_parse.c
+>3. 使用bison把minij_parse.y編譯成minij_parse.c
 
-使用bison產生minij_parse.h
+>使用bison產生minij_parse.h
 ```
 bison -d –o ./generated/minij_parse.c ./src/minij_parse.y
 ```
 
-4.
-使用gcc把minij_lex.c編譯成minij_lex.o
+>4. 使用gcc把minij_lex.c編譯成minij_lex.o
 
-使用gcc把minij_parse.c編譯成minij_parse.o
+>使用gcc把minij_parse.c編譯成minij_parse.o
 
-使用gcc把minij.c編譯成minij.o
+>使用gcc把minij.c編譯成minij.o
 ```
 gcc -c -I./include ./generated/minij_lex.c -o ./obj/minij_lex.o
 gcc -c -I./include ./generated/minij_parse.c -o ./obj/minij_parse.o
 gcc -c -I./include -I./generated ./src/minij.c -o ./obj/minij.o
 ```
 
-5.
-使用gcc link minij.o、minij_lex.o、minij_parse.o到minijparse.exe
+>5. 使用gcc link minij.o、minij_lex.o、minij_parse.o到minijparse.exe
 ```
 gcc -o ./bin/mjparse.exe ./obj/minij.o ./obj/minij_lex.o ./obj/minij_parse.o
 ```
